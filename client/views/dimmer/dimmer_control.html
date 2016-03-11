@@ -1,5 +1,19 @@
 <template name="dimmerControl">
-	<div>
-		<p>Hello World</p>
+	<div class='page-header'>
+		<h2>LED Dimmer</h2>
+	</div>
+
+	<div id='slider'></div>
+	<br>
+
+	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+		<button type="button" id="onButton" 
+		data-turningon-text="Turning ON..." data-on-text="Turn ON" class="btn btn-primary" autocomplete="off">
+		  Turn ON
+		</button>
+
+		<button type="button" id="offButton" data-turningoff-text="Turning OFF..." data-off-text="Turn OFF" class="btn btn-default" autocomplete="off">
+		  Turn OFF
+		</button>
 	</div>
 </template>

@@ -1,0 +1,13 @@
+#slider .rs-range-color  {
+    background-color: #00FFF5;
+}
+#slider .rs-path-color  {
+    background-color: #382d5f;
+    border-radius: 0;
+}
+#slider .rs-handle  {
+    background-color: #00FFF5;
+}
+#slider .rs-border  {
+    border: 8px solid #382d5f;
+}	
