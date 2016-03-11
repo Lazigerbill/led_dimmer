@@ -9,18 +9,18 @@ Template.dimmerControl.rendered = function(){
 		step: 10,
 		startAngle: 90,
 		change: function (arg) {
-	      if (arg.value == 0){
-	      	$('#onButton').prop('disabled', false);
-	      	$('#offButton').prop('disabled', true);
-	      	$("#slider").roundSlider({
-	      		Meteor.call('sub', 0);
-	      		value: "0",
-	      		disabled: true
-	      	});
-	      } else {
-	      	Meteor.call('sub', arg.value);
-	      	console.log(arg.value);
-	      }
+      if (arg.value == 0){
+      	$('#onButton').prop('disabled', false);
+      	$('#offButton').prop('disabled', true);
+      	Meteor.call('sub', 0);
+      	$("#slider").roundSlider({
+      		value: "0",
+      		disabled: true
+      	});
+      } else {
+      	Meteor.call('sub', arg.value);
+      	console.log(arg.value);
+      }
 	  }
 	});
 
@@ -35,9 +35,9 @@ Template.dimmerControl.rendered = function(){
 	  		value: "100",
 	  		disabled: false
 	  	});
-	  },1600);
-	    // $('#onButton').prop('disabled', true);
+	  },800);
 	});
+
 	$('#offButton').on('click', function () {
 		Meteor.call('sub', 0);
 		$('#offButton').prop('disabled', true);
@@ -49,7 +49,6 @@ Template.dimmerControl.rendered = function(){
 				value: "0",
 				disabled: true
 			});
-	  },800);
+	  },400);
 	})
-	
 };
